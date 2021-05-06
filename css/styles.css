@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 400px));
+  gap: 10px;
+  justify-content: center;
+  margin: 0 5px;
+}
+.item {
+  padding: 10px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-areas: "left right";
+}
+.item div {
+  grid-area: "left";
+}
+.item figure {
+  grid-area: "right";
+  align-self: center;
+}
+
+.item span {
+  background-color: white;
+  padding: 2px 5px;
+}
+.item h2 {
+  color: #d2e8e9;
+}
+.item p {
+  color: #d8d8d8;
+}
+.child1 {
+  background-color: #542e71;
+}
+.child1 span {
+  color: #542e71;
+  font-weight: 700;
+}
+.child2 {
+  background-color: #fb3640;
+}
+.child2 span {
+ color: #fb3640;
+ font-weight: 700;
+}
+.child3 {
+  background-color: #b39543;
+}
+.child3 span {
+  color: #b39543;
+  font-weight: 900;
+}
+.child4 {
+  background-color: #cc81d6;
+}
+.child4 span {
+  color: #cc81d6;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    grid-template-columns: repeat(2, minmax(300px, 400px));
+  }
+}
+@media screen and (max-width: 650px) {
+  .container {
+    grid-template-columns: repeat(1, minmax(300px, 420px));
+  }
+}
+
